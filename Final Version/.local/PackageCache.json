@@ -2,6 +2,22 @@
   "Packages": [
     {
       "Package": {
+        "Id": "UATelemetry",
+        "Version": "1.1.0"
+      },
+      "Assemblies": [
+        "C:\\Users\\tuan.nguyen\\.nuget\\packages\\newtonsoft.json/12.0.3\\lib/net45/Newtonsoft.Json.dll",
+        "C:\\Users\\tuan.nguyen\\.nuget\\packages\\system.io.abstractions/3.0.10\\lib/net40/System.IO.Abstractions.dll",
+        "C:\\Users\\tuan.nguyen\\.nuget\\packages\\system.threading.tasks.dataflow/5.0.0\\lib/net461/System.Threading.Tasks.Dataflow.dll",
+        "C:\\Users\\tuan.nguyen\\.nuget\\packages\\system.valuetuple/4.5.0\\lib/net461/System.ValueTuple.dll",
+        "C:\\Users\\tuan.nguyen\\.nuget\\packages\\uatelemetry/1.1.0\\lib/UATelemetry.dll",
+        "C:\\Users\\tuan.nguyen\\.nuget\\packages\\uipath.platform/21.10.0\\lib/net461/UiPath.Platform.dll",
+        "C:\\Users\\tuan.nguyen\\.nuget\\packages\\uipath.telemetry.client/1.5.3\\lib/net461/TelemetryClient.dll"
+      ],
+      "Path": "C:\\Users\\tuan.nguyen\\.nuget\\packages\\uatelemetry\\1.1.0"
+    },
+    {
+      "Package": {
         "Id": "UiPath.Excel.Activities",
         "Version": "2.10.4"
       },
@@ -301,22 +317,6 @@
         "C:\\Users\\tuan.nguyen\\.nuget\\packages\\xamlanimatedgif/1.2.3\\lib/net45/XamlAnimatedGif.dll"
       ],
       "Path": "C:\\Users\\tuan.nguyen\\.nuget\\packages\\uipath.wpfinteractive.activities\\5.0.1"
-    },
-    {
-      "Package": {
-        "Id": "UATelemetry",
-        "Version": "1.1.0"
-      },
-      "Assemblies": [
-        "C:\\Users\\tuan.nguyen\\.nuget\\packages\\newtonsoft.json/12.0.3\\lib/net45/Newtonsoft.Json.dll",
-        "C:\\Users\\tuan.nguyen\\.nuget\\packages\\system.io.abstractions/3.0.10\\lib/net40/System.IO.Abstractions.dll",
-        "C:\\Users\\tuan.nguyen\\.nuget\\packages\\system.threading.tasks.dataflow/5.0.0\\lib/net461/System.Threading.Tasks.Dataflow.dll",
-        "C:\\Users\\tuan.nguyen\\.nuget\\packages\\system.valuetuple/4.5.0\\lib/net461/System.ValueTuple.dll",
-        "C:\\Users\\tuan.nguyen\\.nuget\\packages\\uatelemetry/1.1.0\\lib/UATelemetry.dll",
-        "C:\\Users\\tuan.nguyen\\.nuget\\packages\\uipath.platform/21.10.0\\lib/net461/UiPath.Platform.dll",
-        "C:\\Users\\tuan.nguyen\\.nuget\\packages\\uipath.telemetry.client/1.5.3\\lib/net461/TelemetryClient.dll"
-      ],
-      "Path": "C:\\Users\\tuan.nguyen\\.nuget\\packages\\uatelemetry\\1.1.0"
     }
   ],
   "Conflicts": [],

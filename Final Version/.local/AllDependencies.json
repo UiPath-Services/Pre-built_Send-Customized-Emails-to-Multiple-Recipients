@@ -9357,11 +9357,11 @@
   },
   "project": {
     "restore": {
-      "projectUniqueName": "Send Customized Emails to Multiple Recipients",
-      "projectName": "Send Customized Emails to Multiple Recipients",
-      "projectPath": "C:\\Users\\tuan.nguyen\\Desktop\\Pre-built_Send-Customized-Emails-to-Multiple-Recipients1\\.local",
+      "projectUniqueName": "Send personalized emails to multiple recipients",
+      "projectName": "Send personalized emails to multiple recipients",
+      "projectPath": "C:\\Users\\tuan.nguyen\\Desktop\\R2G Final\\Send personalized emails to multiple recipients\\.local",
       "packagesPath": "C:\\Users\\tuan.nguyen\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\tuan.nguyen\\Desktop\\Pre-built_Send-Customized-Emails-to-Multiple-Recipients1\\.local"
+      "outputPath": "C:\\Users\\tuan.nguyen\\Desktop\\R2G Final\\Send personalized emails to multiple recipients\\.local"
     },
     "frameworks": {
       "net461": {

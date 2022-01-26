@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "TgT9w5S/A9mCPGI8Ux1al28+lrjY/TVJ5G0AVZgAuBY/sKTzPqn6xPEvfARr0Xji8uYKOx5L4oqkXCD8Fky7mQ==",
+  "dgSpecHash": "W/2uUau0RcMgrhWLygzGRwW0BTlRdGHS+D0PioDegqDikxSfBc3iXRSOX7benzm/o3ZV7li6Sff/iRuJ21oIAQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\tuan.nguyen\\Desktop\\Pre-built_Send-Customized-Emails-to-Multiple-Recipients1\\.local\\",
+  "projectFilePath": "C:\\Users\\tuan.nguyen\\Desktop\\R2G Final\\Send personalized emails to multiple recipients\\.local\\",
   "expectedPackageFiles": [
     "C:\\Users\\tuan.nguyen\\.nuget\\packages\\avalonedit\\6.0.1\\avalonedit.6.0.1.nupkg.sha512",
     "C:\\Users\\tuan.nguyen\\.nuget\\packages\\castle.core\\4.3.1\\castle.core.4.3.1.nupkg.sha512",

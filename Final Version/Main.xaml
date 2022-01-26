@@ -1,15 +1,11 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="Main" this:Main.Check_To_Hide_Menu="False" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uwa="clr-namespace:UiPath.WPFInteractive.Activities;assembly=UiPath.WPFInteractive.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="Check_To_Hide_Menu" Type="InArgument(x:Boolean)" />
-    <x:Property Name="OutputFilePath" Type="InArgument(x:String)" />
   </x:Members>
-  <this:Main.OutputFilePath>
-    <InArgument x:TypeArguments="x:String" />
-  </this:Main.OutputFilePath>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1120,1175</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1094,1175</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Main2_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="47">
@@ -107,7 +103,7 @@
       <AssemblyReference>UiPath.Platform</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <StateMachine InitialState="{x:Reference __ReferenceID2}" sap2010:Annotation.AnnotationText="Uriel Vazquez - 12/13/2021 - 1.0.1&#xA;&#xA;Send Customized Emails to Multiple Recipients&#xA;&#xA;This process allows you to send personalized emails to a group of people based on an input file and email template. &#xA;&#xA;This project is developed and tested with following package versions:&#xA;&#xA;    &quot;UATelemetry&quot;: &quot;[1.1.0]&quot;,&#xD;&#xA;    &quot;UiPath.Excel.Activities&quot;: &quot;[2.10.4]&quot;,&#xD;&#xA;    &quot;UiPath.Form.Activities&quot;: &quot;[1.5.0]&quot;,&#xD;&#xA;    &quot;UiPath.Mail.Activities&quot;: &quot;[1.12.3]&quot;,&#xD;&#xA;    &quot;UiPath.System.Activities&quot;: &quot;[21.4.1]&quot;,&#xD;&#xA;    &quot;UiPath.UIAutomation.Activities&quot;: &quot;[21.4.4]&quot;,&#xD;&#xA;    &quot;UiPath.WebAPI.Activities&quot;: &quot;[1.7.0]&quot;,&#xD;&#xA;    &quot;UiPath.Word.Activities&quot;: &quot;[1.8.0-preview]&quot;,&#xD;&#xA;    &quot;UiPath.WPFInteractive.Activities&quot;: &quot;[5.0.1]&quot;" DisplayName="General Business Process" sap:VirtualizedContainerService.HintSize="693,1110" sap2010:WorkflowViewState.IdRef="StateMachine_1">
+  <StateMachine InitialState="{x:Reference __ReferenceID2}" sap2010:Annotation.AnnotationText="Uriel Vazquez - 12/13/2021 - 1.0.1&#xA;&#xA;Send personalized emails to multiple recipients&#xA;&#xA;This process allows you to send personalized emails to a group of people based on an input file and email template. &#xA;&#xA;This project is developed and tested with following package versions:&#xA;&#xA;    &quot;UATelemetry&quot;: &quot;[1.1.0]&quot;,&#xA;    &quot;UiPath.Excel.Activities&quot;: &quot;[2.10.4]&quot;,&#xA;    &quot;UiPath.Form.Activities&quot;: &quot;[1.5.0]&quot;,&#xA;    &quot;UiPath.Mail.Activities&quot;: &quot;[1.12.3]&quot;,&#xA;    &quot;UiPath.System.Activities&quot;: &quot;[21.4.1]&quot;,&#xA;    &quot;UiPath.UIAutomation.Activities&quot;: &quot;[21.4.4]&quot;,&#xA;    &quot;UiPath.WebAPI.Activities&quot;: &quot;[1.7.0]&quot;,&#xA;    &quot;UiPath.Word.Activities&quot;: &quot;[1.8.0-preview]&quot;,&#xA;    &quot;UiPath.WPFInteractive.Activities&quot;: &quot;[5.0.1]&quot;" DisplayName="General Business Process" sap:VirtualizedContainerService.HintSize="693,1110" sap2010:WorkflowViewState.IdRef="StateMachine_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -277,7 +273,7 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <Transition.To>
-            <State x:Name="__ReferenceID0" sap2010:Annotation.AnnotationText="End process and close all applications used." DisplayName="End Process" sap:VirtualizedContainerService.HintSize="623,1143" sap2010:WorkflowViewState.IdRef="State_1" IsFinal="True">
+            <State x:Name="__ReferenceID0" sap2010:Annotation.AnnotationText="End process and close all applications used." DisplayName="End Process" sap:VirtualizedContainerService.HintSize="256,112" sap2010:WorkflowViewState.IdRef="State_1" IsFinal="True">
               <State.Entry>
                 <TryCatch DisplayName="Try to close all aplications" sap:VirtualizedContainerService.HintSize="577,999" sap2010:WorkflowViewState.IdRef="TryCatch_4">
                   <TryCatch.Try>

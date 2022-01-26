@@ -1,5 +1,5 @@
 {
-  "name": "Send Customized Emails to Multiple Recipients",
+  "name": "Send personalized emails to multiple recipients",
   "description": "This automation allows you to send personalized emails to a group of people based on an input file and email template.",
   "main": "Main.xaml",
   "dependencies": {
@@ -17,7 +17,7 @@
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "21.8.0.0",
-  "projectVersion": "1.0.3",
+  "projectVersion": "1.0.6",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
@@ -47,12 +47,30 @@
     "fileInfoCollection": [],
     "modernBehavior": true
   },
+  "arguments": {
+    "input": [
+      {
+        "name": "Check_To_Hide_Menu",
+        "type": "System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+        "required": false,
+        "hasDefault": true
+      }
+    ],
+    "output": []
+  },
   "expressionLanguage": "VisualBasic",
   "entryPoints": [
     {
       "filePath": "Main.xaml",
       "uniqueId": "efdf1178-e29b-4e40-979a-fb244174ed47",
-      "input": [],
+      "input": [
+        {
+          "name": "Check_To_Hide_Menu",
+          "type": "System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+          "required": false,
+          "hasDefault": true
+        }
+      ],
       "output": []
     }
   ],
