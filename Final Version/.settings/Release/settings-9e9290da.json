@@ -8,6 +8,8 @@
   "UiPath.System.Activities.AppendLine.Encoding": "",
   "UiPath.System.Activities.FilterDataTable.FilterRowsMode": "Keep",
   "UiPath.System.Activities.InvokeWorkflowFile.Timeout": "0",
+  "UiPath.System.Activities.InvokeWorkflowFile.LogEntry": "No",
+  "UiPath.System.Activities.InvokeWorkflowFile.LogExit": "No",
   "UiPath.System.Activities.LogMessage.Level": "Info",
   "UiPath.System.Activities.MessageBox.Buttons": "Ok",
   "UiPath.System.Activities.MessageBox.TopMost": "True",

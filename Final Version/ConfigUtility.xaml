@@ -1,0 +1,267 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="ConfigUtility" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1458,676" sap2010:WorkflowViewState.IdRef="ConfigUtility_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ufa="clr-namespace:UiPath.Form.Activities;assembly=UiPath.Form.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="42">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.Form.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+      <x:String>System.Dynamic</x:String>
+      <x:String>System.Collections.Specialized</x:String>
+      <x:String>UiPath.Web.Activities</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="31">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.Form.Activities</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="ConfigUtility" sap:VirtualizedContainerService.HintSize="619,611" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="str_selectedButton" />
+      <Variable x:TypeArguments="x:String" Name="str_configJson" />
+      <Variable x:TypeArguments="scg:Dictionary(x:String, x:Object)" Default="[new dictionary(of string, object)]" Name="dict_runConfig" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:ReadTextFile File="{x:Null}" Content="[str_configJson]" DisplayName="Read Text File" FileName="Data\Supporting\ConfigUtility.json" sap:VirtualizedContainerService.HintSize="577,79" sap2010:WorkflowViewState.IdRef="ReadTextFile_5" />
+    <ufa:FormActivity CreateFormActivityFileName="{x:Null}" CreateFormActivityFilePath="{x:Null}" Dismissed="{x:Null}" FormTitle="{x:Null}" IconPath="{x:Null}" LocalCSSFilePath="{x:Null}" TimeoutInSeconds="{x:Null}" WindowPositionLeft="{x:Null}" WindowPositionTop="{x:Null}" CreateFormId="b8b9a9d8-33bd-4cd5-9bb0-42c467f90ca3" DisableMaximizeButton="False" DisableMinimizeButton="False" DisableSanitize="True" DisplayName="Create Form" FormFieldsInputData="[str_configJson]" FormFieldsOutputData="[str_configJson]" FormHeight="800" FormSchema="%[{&quot;label&quot;:&quot;Table&quot;,&quot;cellAlignment&quot;:&quot;right&quot;,&quot;key&quot;:&quot;table1&quot;,&quot;type&quot;:&quot;table&quot;,&quot;numRows&quot;:1,&quot;numCols&quot;:8,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;rows&quot;:[[{&quot;components&quot;:[]},{&quot;components&quot;:[]},{&quot;components&quot;:[]},{&quot;components&quot;:[]},{&quot;components&quot;:[]},{&quot;components&quot;:[]},{&quot;components&quot;:[]},{&quot;components&quot;:[{&quot;label&quot;:&quot;Reset all values&quot;,&quot;theme&quot;:&quot;danger&quot;,&quot;tooltip&quot;:&quot;Resets this form backs to the attended framework's starting field keys and values.&quot;,&quot;tableView&quot;:false,&quot;key&quot;:&quot;resetAllValues&quot;,&quot;input&quot;:true,&quot;type&quot;:&quot;button&quot;,&quot;isResetData&quot;:false}]}]]},{&quot;components&quot;:[{&quot;label&quot;:&quot;Form Defaults&quot;,&quot;key&quot;:&quot;formDefaults&quot;,&quot;components&quot;:[{&quot;refreshOnChange&quot;:true,&quot;content&quot;:&quot;&lt;br&gt;\nIf you want certain fields in your input form to reset with a default value during each execution, please provide the field key and reset value here. The description is for your own reference.\n&lt;br&gt;&lt;br&gt;\nFor example, I have a Folder Browse component with the field key \&quot;outputFolderPath\&quot; in my input form. If I want that field to be blank for each execution, I can include the field key here and just leave the value blank.&quot;,&quot;key&quot;:&quot;label&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;label&quot;:&quot;Label&quot;,&quot;type&quot;:&quot;label&quot;},{&quot;label&quot;:&quot;formDefaultsGrid&quot;,&quot;key&quot;:&quot;formDefaultsGrid&quot;,&quot;type&quot;:&quot;editgrid&quot;,&quot;input&quot;:true,&quot;tableView&quot;:false,&quot;components&quot;:[{&quot;columns&quot;:[{&quot;components&quot;:[{&quot;label&quot;:&quot;Field Key&quot;,&quot;tableView&quot;:true,&quot;validate&quot;:{&quot;required&quot;:true},&quot;key&quot;:&quot;formDefaultsFieldKey&quot;,&quot;type&quot;:&quot;textfield&quot;,&quot;input&quot;:true,&quot;hideOnChildrenHidden&quot;:false}],&quot;width&quot;:6,&quot;offset&quot;:0,&quot;push&quot;:0,&quot;pull&quot;:0,&quot;size&quot;:&quot;md&quot;,&quot;currentWidth&quot;:6},{&quot;components&quot;:[{&quot;label&quot;:&quot;Value&quot;,&quot;tableView&quot;:true,&quot;key&quot;:&quot;formDefaultsGridValue&quot;,&quot;type&quot;:&quot;textfield&quot;,&quot;input&quot;:true,&quot;hideOnChildrenHidden&quot;:false}],&quot;width&quot;:6,&quot;offset&quot;:0,&quot;push&quot;:0,&quot;pull&quot;:0,&quot;size&quot;:&quot;md&quot;,&quot;currentWidth&quot;:6},{&quot;components&quot;:[{&quot;label&quot;:&quot;Description&quot;,&quot;tableView&quot;:true,&quot;key&quot;:&quot;formDefaultsGridDescription&quot;,&quot;type&quot;:&quot;textfield&quot;,&quot;input&quot;:true,&quot;hideOnChildrenHidden&quot;:false}],&quot;size&quot;:&quot;md&quot;,&quot;width&quot;:10,&quot;offset&quot;:0,&quot;push&quot;:0,&quot;pull&quot;:0,&quot;currentWidth&quot;:10}],&quot;autoAdjust&quot;:true,&quot;key&quot;:&quot;columns&quot;,&quot;type&quot;:&quot;columns&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;label&quot;:&quot;Columns&quot;}]}]},{&quot;label&quot;:&quot;Exceptions&quot;,&quot;key&quot;:&quot;exceptions&quot;,&quot;components&quot;:[{&quot;refreshOnChange&quot;:true,&quot;content&quot;:&quot;&lt;br&gt;\nCreate your business rule exception language here so you don't need to hardcode the messages in your workflows.\n&lt;br&gt;\nThis allows you to easily change exception messages based on user feedback. Please note you still need to publish a new version of the automation for the changes to take effect.\n&lt;br&gt;&lt;br&gt;\nFor example, I create a new business rule exception called \&quot;noInputData\&quot; with the message \&quot;No data was found in your input file.\&quot;\n&lt;br&gt; In your workflow, use the Throw activity accompanied by New BusinessRuleException(io_dict_Config(\&quot;noInputData\&quot;).ToString)) to use the message.&quot;,&quot;key&quot;:&quot;label1&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;label&quot;:&quot;Label&quot;,&quot;type&quot;:&quot;label&quot;},{&quot;label&quot;:&quot;exceptionsGrid&quot;,&quot;hideLabel&quot;:true,&quot;key&quot;:&quot;exceptionsGrid&quot;,&quot;type&quot;:&quot;editgrid&quot;,&quot;input&quot;:true,&quot;tableView&quot;:false,&quot;components&quot;:[{&quot;columns&quot;:[{&quot;components&quot;:[{&quot;label&quot;:&quot;Field Key&quot;,&quot;tableView&quot;:true,&quot;validate&quot;:{&quot;required&quot;:true},&quot;key&quot;:&quot;exceptionsGridFieldKey&quot;,&quot;type&quot;:&quot;textfield&quot;,&quot;input&quot;:true,&quot;hideOnChildrenHidden&quot;:false}],&quot;width&quot;:6,&quot;offset&quot;:0,&quot;push&quot;:0,&quot;pull&quot;:0,&quot;size&quot;:&quot;md&quot;,&quot;currentWidth&quot;:6},{&quot;components&quot;:[{&quot;label&quot;:&quot;Value&quot;,&quot;tableView&quot;:true,&quot;validate&quot;:{&quot;required&quot;:true},&quot;key&quot;:&quot;exceptionsGridValue&quot;,&quot;type&quot;:&quot;textfield&quot;,&quot;input&quot;:true,&quot;hideOnChildrenHidden&quot;:false}],&quot;width&quot;:6,&quot;offset&quot;:0,&quot;push&quot;:0,&quot;pull&quot;:0,&quot;size&quot;:&quot;md&quot;,&quot;currentWidth&quot;:6},{&quot;components&quot;:[{&quot;label&quot;:&quot;Description&quot;,&quot;tableView&quot;:true,&quot;key&quot;:&quot;exceptionsGridDescription&quot;,&quot;type&quot;:&quot;textfield&quot;,&quot;input&quot;:true,&quot;hideOnChildrenHidden&quot;:false}],&quot;size&quot;:&quot;md&quot;,&quot;width&quot;:10,&quot;offset&quot;:0,&quot;push&quot;:0,&quot;pull&quot;:0,&quot;currentWidth&quot;:10}],&quot;autoAdjust&quot;:true,&quot;key&quot;:&quot;columns&quot;,&quot;type&quot;:&quot;columns&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;label&quot;:&quot;Columns&quot;}]}]},{&quot;label&quot;:&quot;Settings&quot;,&quot;key&quot;:&quot;settings&quot;,&quot;components&quot;:[{&quot;refreshOnChange&quot;:true,&quot;content&quot;:&quot;&lt;br&gt;\nAt a minimum, you'll want to edit the following keys:\n&lt;br&gt;\n&lt;ul&gt;\n  &lt;li&gt;logF_BusinessProcessName&lt;/li&gt;\n  &lt;li&gt;userGuideUrl&lt;/li&gt;\n  &lt;li&gt;automationDescription&lt;/li&gt;\n  &lt;/ul&gt;&quot;,&quot;key&quot;:&quot;label2&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;label&quot;:&quot;Label&quot;,&quot;type&quot;:&quot;label&quot;},{&quot;label&quot;:&quot;settingsGrid&quot;,&quot;hideLabel&quot;:true,&quot;key&quot;:&quot;settingsGrid&quot;,&quot;type&quot;:&quot;editgrid&quot;,&quot;input&quot;:true,&quot;tableView&quot;:false,&quot;components&quot;:[{&quot;columns&quot;:[{&quot;components&quot;:[{&quot;label&quot;:&quot;Field Key&quot;,&quot;tableView&quot;:true,&quot;validate&quot;:{&quot;required&quot;:true},&quot;key&quot;:&quot;settingsGridFieldKey&quot;,&quot;type&quot;:&quot;textfield&quot;,&quot;input&quot;:true,&quot;hideOnChildrenHidden&quot;:false}],&quot;width&quot;:15,&quot;push&quot;:0,&quot;pull&quot;:0,&quot;size&quot;:&quot;md&quot;,&quot;offset&quot;:0,&quot;currentWidth&quot;:15},{&quot;components&quot;:[{&quot;label&quot;:&quot;Value&quot;,&quot;tableView&quot;:true,&quot;key&quot;:&quot;settingsGridValue&quot;,&quot;type&quot;:&quot;textfield&quot;,&quot;input&quot;:true,&quot;hideOnChildrenHidden&quot;:false}],&quot;width&quot;:15,&quot;offset&quot;:0,&quot;push&quot;:0,&quot;pull&quot;:0,&quot;size&quot;:&quot;md&quot;,&quot;currentWidth&quot;:15},{&quot;components&quot;:[{&quot;label&quot;:&quot;Description&quot;,&quot;tableView&quot;:true,&quot;key&quot;:&quot;settingsGridDescription&quot;,&quot;type&quot;:&quot;textfield&quot;,&quot;input&quot;:true,&quot;hideOnChildrenHidden&quot;:false}],&quot;size&quot;:&quot;md&quot;,&quot;width&quot;:10,&quot;offset&quot;:0,&quot;push&quot;:0,&quot;pull&quot;:0,&quot;currentWidth&quot;:10}],&quot;autoAdjust&quot;:true,&quot;key&quot;:&quot;columns&quot;,&quot;type&quot;:&quot;columns&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;label&quot;:&quot;Columns&quot;}]}]},{&quot;label&quot;:&quot;Constants&quot;,&quot;key&quot;:&quot;constants&quot;,&quot;components&quot;:[{&quot;refreshOnChange&quot;:true,&quot;content&quot;:&quot;&lt;br&gt;\nAdjust the formTitle value to set the title of your input and result forms.&quot;,&quot;key&quot;:&quot;label3&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;label&quot;:&quot;Label&quot;,&quot;type&quot;:&quot;label&quot;},{&quot;label&quot;:&quot;constantsGrid&quot;,&quot;hideLabel&quot;:true,&quot;key&quot;:&quot;constantsGrid&quot;,&quot;type&quot;:&quot;editgrid&quot;,&quot;input&quot;:true,&quot;tableView&quot;:false,&quot;components&quot;:[{&quot;columns&quot;:[{&quot;components&quot;:[{&quot;label&quot;:&quot;Field Key&quot;,&quot;tableView&quot;:true,&quot;validate&quot;:{&quot;required&quot;:true},&quot;key&quot;:&quot;constantsGridFieldKey&quot;,&quot;type&quot;:&quot;textfield&quot;,&quot;input&quot;:true,&quot;hideOnChildrenHidden&quot;:false}],&quot;width&quot;:10,&quot;offset&quot;:0,&quot;push&quot;:0,&quot;pull&quot;:0,&quot;size&quot;:&quot;md&quot;,&quot;currentWidth&quot;:10},{&quot;components&quot;:[{&quot;label&quot;:&quot;Value&quot;,&quot;tableView&quot;:true,&quot;validate&quot;:{&quot;required&quot;:true},&quot;key&quot;:&quot;constantsGridValue&quot;,&quot;type&quot;:&quot;textfield&quot;,&quot;input&quot;:true,&quot;hideOnChildrenHidden&quot;:false}],&quot;width&quot;:10,&quot;offset&quot;:0,&quot;push&quot;:0,&quot;pull&quot;:0,&quot;size&quot;:&quot;md&quot;,&quot;currentWidth&quot;:10},{&quot;components&quot;:[{&quot;label&quot;:&quot;Description&quot;,&quot;tableView&quot;:true,&quot;key&quot;:&quot;constantsGridDescription&quot;,&quot;type&quot;:&quot;textfield&quot;,&quot;input&quot;:true,&quot;hideOnChildrenHidden&quot;:false}],&quot;size&quot;:&quot;md&quot;,&quot;width&quot;:10,&quot;offset&quot;:0,&quot;push&quot;:0,&quot;pull&quot;:0,&quot;currentWidth&quot;:10}],&quot;autoAdjust&quot;:true,&quot;key&quot;:&quot;columns&quot;,&quot;type&quot;:&quot;columns&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;label&quot;:&quot;Columns&quot;}]}]},{&quot;label&quot;:&quot;Assets&quot;,&quot;key&quot;:&quot;assets&quot;,&quot;components&quot;:[{&quot;label&quot;:&quot;assetsGrid&quot;,&quot;hideLabel&quot;:true,&quot;key&quot;:&quot;assetsGrid&quot;,&quot;type&quot;:&quot;editgrid&quot;,&quot;input&quot;:true,&quot;tableView&quot;:false,&quot;components&quot;:[{&quot;columns&quot;:[{&quot;components&quot;:[{&quot;label&quot;:&quot;Field Key&quot;,&quot;tableView&quot;:true,&quot;validate&quot;:{&quot;required&quot;:true},&quot;key&quot;:&quot;assetsGridFieldKey&quot;,&quot;type&quot;:&quot;textfield&quot;,&quot;input&quot;:true,&quot;hideOnChildrenHidden&quot;:false}],&quot;width&quot;:6,&quot;offset&quot;:0,&quot;push&quot;:0,&quot;pull&quot;:0,&quot;size&quot;:&quot;md&quot;,&quot;currentWidth&quot;:6},{&quot;components&quot;:[{&quot;label&quot;:&quot;Value&quot;,&quot;tableView&quot;:true,&quot;validate&quot;:{&quot;required&quot;:true},&quot;key&quot;:&quot;assetsGridValue&quot;,&quot;type&quot;:&quot;textfield&quot;,&quot;input&quot;:true,&quot;hideOnChildrenHidden&quot;:false}],&quot;width&quot;:6,&quot;offset&quot;:0,&quot;push&quot;:0,&quot;pull&quot;:0,&quot;size&quot;:&quot;md&quot;,&quot;currentWidth&quot;:6},{&quot;components&quot;:[{&quot;label&quot;:&quot;Orchestrator Asset Folder&quot;,&quot;tableView&quot;:true,&quot;key&quot;:&quot;assetsGridOrchestratorAssetFolder&quot;,&quot;type&quot;:&quot;textfield&quot;,&quot;input&quot;:true,&quot;hideOnChildrenHidden&quot;:false}],&quot;size&quot;:&quot;md&quot;,&quot;width&quot;:6,&quot;offset&quot;:0,&quot;push&quot;:0,&quot;pull&quot;:0,&quot;currentWidth&quot;:6},{&quot;components&quot;:[{&quot;label&quot;:&quot;Description&quot;,&quot;tableView&quot;:true,&quot;key&quot;:&quot;assetsGridDescription&quot;,&quot;type&quot;:&quot;textfield&quot;,&quot;input&quot;:true,&quot;hideOnChildrenHidden&quot;:false}],&quot;size&quot;:&quot;md&quot;,&quot;width&quot;:10,&quot;offset&quot;:0,&quot;push&quot;:0,&quot;pull&quot;:0,&quot;currentWidth&quot;:10}],&quot;autoAdjust&quot;:true,&quot;key&quot;:&quot;columns&quot;,&quot;type&quot;:&quot;columns&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;label&quot;:&quot;Columns&quot;}]}]}],&quot;hideLabel&quot;:true,&quot;key&quot;:&quot;tabs&quot;,&quot;type&quot;:&quot;tabs&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;label&quot;:&quot;Tabs&quot;},{&quot;label&quot;:&quot;Table&quot;,&quot;cellAlignment&quot;:&quot;right&quot;,&quot;key&quot;:&quot;table&quot;,&quot;type&quot;:&quot;table&quot;,&quot;numRows&quot;:1,&quot;numCols&quot;:8,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;rows&quot;:[[{&quot;components&quot;:[]},{&quot;components&quot;:[]},{&quot;components&quot;:[]},{&quot;components&quot;:[]},{&quot;components&quot;:[]},{&quot;components&quot;:[]},{&quot;components&quot;:[{&quot;label&quot;:&quot;Cancel&quot;,&quot;theme&quot;:&quot;secondary&quot;,&quot;tableView&quot;:false,&quot;key&quot;:&quot;cancel&quot;,&quot;input&quot;:true,&quot;type&quot;:&quot;button&quot;,&quot;isResetData&quot;:false}]},{&quot;components&quot;:[{&quot;label&quot;:&quot;Save&quot;,&quot;disableOnInvalid&quot;:true,&quot;tableView&quot;:false,&quot;key&quot;:&quot;save&quot;,&quot;custom&quot;:&quot;instance.emit('executeDoBlock', instance.component);&quot;,&quot;type&quot;:&quot;button&quot;,&quot;input&quot;:true,&quot;isResetData&quot;:false}]}]]}]" FormTheme="{}{&quot;Activities&quot;:[&quot;FORMS&quot;],&quot;Id&quot;:&quot;1658495494111&quot;,&quot;Name&quot;:&quot;uipath&quot;,&quot;BaseCss&quot;:&quot;./assets/css/themes/uipath.bootstrap.min.css&quot;,&quot;ImageSrc&quot;:&quot;./assets/themeicons/uipath.png&quot;,&quot;OverrideCssUrl&quot;:&quot;./assets/css/themes/uipath.custom.css&quot;,&quot;UserStyleOverrides&quot;:&quot;body , h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {\n                      font-family : Arial !important;\n                    }table, .btn, .form-control {\n                      font-size : 14px !important;\n                     }h1 {\n                      font-size : 36px !important;\n                    }h2 {\n                      font-size : 30px !important;\n                    }h3 {\n                      font-size : 24px !important;\n                    }h4 {\n                      font-size : 18px !important;\n                    }h5 {\n                      font-size : 14px !important;\n                    }h6 {\n                      font-size : 12px !important;\n                    }body {\n      background:  #ffffff !important;\n      font-size : 14px !important;\n      font-family : Arial !important;\n      color : #333333 !important\n    } .panel-default {\n                        background:   !important;\n                        border-color :   !important;\n                      }\n                 .panel-default &gt; .panel-heading {\n                        background-color:  !important;\n                        color : #333333 !important\n                      }.btn-primary {\n                          background:  #0067df !important;\n                          border-color:  #0067df !important;\n                          color:  #ffffff !important;\n                      } .btn-primary:hover {\n                          background:  #0067df !important;\n                          color:  #ffffff !important;\n                      } .btn-default {\n                        background:   !important;\n                        border-color:   !important;\n                        color:   !important;\n                      } .btn-default:hover {\n                        background:   !important;\n                        color:   !important;\n                      } &quot;,&quot;Properties&quot;:&quot;&quot;,&quot;IsCustomTheme&quot;:true,&quot;Version&quot;:1,&quot;ThemeVersion&quot;:1}" FormWidth="1400" GenerateInputFields="False" sap:VirtualizedContainerService.HintSize="577,400" sap2010:WorkflowViewState.IdRef="FormActivity_1" IsReadOnly="False" MaxColumnsForSchemaGeneration="6" RunDoBlockFirst="False" RunInIsolatedMode="False" SelectedButton="[str_selectedButton]" StartAsMinimized="False">
+      <ufa:FormActivity.Body>
+        <ActivityAction x:TypeArguments="scg:Dictionary(x:String, x:Object)">
+          <Sequence sap:VirtualizedContainerService.HintSize="539,274" sap2010:WorkflowViewState.IdRef="Sequence_12">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="str_resetConfirmation" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[str_selectedButton]" sap:VirtualizedContainerService.HintSize="497,182" sap2010:WorkflowViewState.IdRef="Switch`1_2">
+              <Switch.Default>
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Error" Message="[&quot;Invalid button pressed&quot;]" />
+              </Switch.Default>
+              <Sequence x:Key="save" sap:VirtualizedContainerService.HintSize="575,885" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                <Sequence.Variables>
+                  <Variable x:TypeArguments="njl:JObject" Name="jObj_config" />
+                  <Variable x:TypeArguments="scg:Dictionary(x:String, s:String[])" Default="[New Dictionary(of String, String())]" Name="dict_assetConfig" />
+                </Sequence.Variables>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:WriteTextFile File="{x:Null}" DisplayName="Write Text File" FileName="Data\Supporting\ConfigUtility.json" sap:VirtualizedContainerService.HintSize="533,132" sap2010:WorkflowViewState.IdRef="WriteTextFile_9" Text="[str_configJson]" />
+                <ui:DeserializeJson x:TypeArguments="njl:JObject" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="533,59" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_2" JsonObject="[jObj_config]" JsonString="[str_configJson]" />
+                <ui:ForEach x:TypeArguments="njl:JProperty" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="533,350" sap2010:WorkflowViewState.IdRef="ForEach`1_13" Values="[jObj_config]">
+                  <ui:ForEach.Body>
+                    <ActivityAction x:TypeArguments="njl:JProperty">
+                      <ActivityAction.Argument>
+                        <DelegateInArgument x:TypeArguments="njl:JProperty" Name="tab" />
+                      </ActivityAction.Argument>
+                      <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[tab.Name]" sap:VirtualizedContainerService.HintSize="497,226" sap2010:WorkflowViewState.IdRef="Switch`1_3">
+                        <ui:ForEach x:TypeArguments="njl:JObject" CurrentIndex="{x:Null}" x:Key="formDefaultsGrid" DisplayName="ForEach&lt;JObject&gt;" sap:VirtualizedContainerService.HintSize="434,184" sap2010:WorkflowViewState.IdRef="ForEach`1_8" Values="[tab.Value]">
+                          <ui:ForEach.Body>
+                            <ActivityAction x:TypeArguments="njl:JObject">
+                              <ActivityAction.Argument>
+                                <DelegateInArgument x:TypeArguments="njl:JObject" Name="item" />
+                              </ActivityAction.Argument>
+                              <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_6">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:Object">[dict_runConfig(item("formDefaultsFieldKey").ToString)]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:Object">[item("formDefaultsGridValue").ToString]</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                            </ActivityAction>
+                          </ui:ForEach.Body>
+                        </ui:ForEach>
+                        <ui:ForEach x:TypeArguments="njl:JObject" CurrentIndex="{x:Null}" x:Key="exceptionsGrid" DisplayName="ForEach&lt;JObject&gt;" sap:VirtualizedContainerService.HintSize="434,184" sap2010:WorkflowViewState.IdRef="ForEach`1_9" Values="[tab.Value]">
+                          <ui:ForEach.Body>
+                            <ActivityAction x:TypeArguments="njl:JObject">
+                              <ActivityAction.Argument>
+                                <DelegateInArgument x:TypeArguments="njl:JObject" Name="item" />
+                              </ActivityAction.Argument>
+                              <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_7">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:Object">[dict_runConfig(item("exceptionsGridFieldKey").ToString)]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:String">[item("exceptionsGridValue").ToString]</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                            </ActivityAction>
+                          </ui:ForEach.Body>
+                        </ui:ForEach>
+                        <ui:ForEach x:TypeArguments="njl:JObject" CurrentIndex="{x:Null}" x:Key="settingsGrid" DisplayName="ForEach&lt;JObject&gt;" sap:VirtualizedContainerService.HintSize="434,184" sap2010:WorkflowViewState.IdRef="ForEach`1_10" Values="[tab.Value]">
+                          <ui:ForEach.Body>
+                            <ActivityAction x:TypeArguments="njl:JObject">
+                              <ActivityAction.Argument>
+                                <DelegateInArgument x:TypeArguments="njl:JObject" Name="item" />
+                              </ActivityAction.Argument>
+                              <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_8">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:Object">[dict_runConfig(item("settingsGridFieldKey").ToString)]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:String">[item("settingsGridValue").ToString]</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                            </ActivityAction>
+                          </ui:ForEach.Body>
+                        </ui:ForEach>
+                        <ui:ForEach x:TypeArguments="njl:JObject" CurrentIndex="{x:Null}" x:Key="constantsGrid" DisplayName="ForEach&lt;JObject&gt;" sap:VirtualizedContainerService.HintSize="434,184" sap2010:WorkflowViewState.IdRef="ForEach`1_11" Values="[tab.Value]">
+                          <ui:ForEach.Body>
+                            <ActivityAction x:TypeArguments="njl:JObject">
+                              <ActivityAction.Argument>
+                                <DelegateInArgument x:TypeArguments="njl:JObject" Name="item" />
+                              </ActivityAction.Argument>
+                              <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_9">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:Object">[dict_runConfig(item("constantsGridFieldKey").ToString)]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:String">[item("constantsGridValue").ToString]</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                            </ActivityAction>
+                          </ui:ForEach.Body>
+                        </ui:ForEach>
+                        <Sequence x:Key="assetsGrid" sap:VirtualizedContainerService.HintSize="554,846" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="512,79" sap2010:WorkflowViewState.IdRef="DeleteFileX_2" Path="Data\Supporting\AssetConfig.json" />
+                          <If Condition="[tab.Value.HasValues]" sap:VirtualizedContainerService.HintSize="512,635" sap2010:WorkflowViewState.IdRef="If_4">
+                            <If.Then>
+                              <Sequence sap:VirtualizedContainerService.HintSize="476,448" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:ForEach x:TypeArguments="njl:JObject" CurrentIndex="{x:Null}" DisplayName="ForEach&lt;JObject&gt;" sap:VirtualizedContainerService.HintSize="434,184" sap2010:WorkflowViewState.IdRef="ForEach`1_12" Values="[tab.Value]">
+                                  <ui:ForEach.Body>
+                                    <ActivityAction x:TypeArguments="njl:JObject">
+                                      <ActivityAction.Argument>
+                                        <DelegateInArgument x:TypeArguments="njl:JObject" Name="item" />
+                                      </ActivityAction.Argument>
+                                      <Assign DisplayName="Assign asset value in Config" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_10">
+                                        <Assign.To>
+                                          <OutArgument x:TypeArguments="s:String[]">[dict_assetConfig(item("assetsGridFieldKey").ToString)]</OutArgument>
+                                        </Assign.To>
+                                        <Assign.Value>
+                                          <InArgument x:TypeArguments="s:String[]">[{item("assetsGridValue").ToString,item("assetsGridOrchestratorAssetFolder").ToString}]</InArgument>
+                                        </Assign.Value>
+                                      </Assign>
+                                    </ActivityAction>
+                                  </ui:ForEach.Body>
+                                </ui:ForEach>
+                                <ui:WriteTextFile File="{x:Null}" DisplayName="Write Text File" FileName="Data\Supporting\AssetConfig.json" sap:VirtualizedContainerService.HintSize="434,132" sap2010:WorkflowViewState.IdRef="WriteTextFile_10" Text="[Newtonsoft.Json.JsonConvert.SerializeObject(dict_assetConfig)]" />
+                              </Sequence>
+                            </If.Then>
+                            <If.Else>
+                              <Sequence sap2010:WorkflowViewState.IdRef="Sequence_14">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </Sequence>
+                            </If.Else>
+                          </If>
+                        </Sequence>
+                      </Switch>
+                    </ActivityAction>
+                  </ui:ForEach.Body>
+                </ui:ForEach>
+                <ui:WriteTextFile File="{x:Null}" DisplayName="Write Text File" FileName="Data\Supporting\Config.json" sap:VirtualizedContainerService.HintSize="533,132" sap2010:WorkflowViewState.IdRef="WriteTextFile_11" Text="[Newtonsoft.Json.JsonConvert.SerializeObject(dict_runConfig)]" />
+              </Sequence>
+              <Sequence x:Key="resetAllValues" sap:VirtualizedContainerService.HintSize="526,684" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:MessageBox Caption="{x:Null}" AutoCloseAfter="00:00:00" Buttons="YesNo" ChosenButton="[str_resetConfirmation]" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="484,84" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[&quot;Are you sure you want to reset this Config form? All changes to this Config form will have been lost.&quot;]" />
+                <If Condition="[str_resetConfirmation = &quot;Yes&quot;]" sap:VirtualizedContainerService.HintSize="484,344" sap2010:WorkflowViewState.IdRef="If_6">
+                  <If.Then>
+                    <ui:CopyFile ContinueOnError="{x:Null}" Destination="Data\Supporting\ConfigUtility.json" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="434,157" sap2010:WorkflowViewState.IdRef="CopyFile_2" Overwrite="True" Path="Data\Supporting\ConfigUtility - Backup.json" />
+                  </If.Then>
+                  <If.Else>
+                    <Sequence sap2010:WorkflowViewState.IdRef="Sequence_19">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </Sequence>
+                  </If.Else>
+                </If>
+                <ui:MessageBox Caption="{x:Null}" AutoCloseAfter="00:00:00" Buttons="Ok" ChosenButton="[str_resetConfirmation]" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="484,84" sap2010:WorkflowViewState.IdRef="MessageBox_4" Text="[&quot;Please rerun the ConfigUtility workflow.&quot;]" />
+              </Sequence>
+              <x:Null x:Key="cancel" />
+            </Switch>
+          </Sequence>
+        </ActivityAction>
+      </ufa:FormActivity.Body>
+      <ufa:FormActivity.DelayBody>
+        <ActivityAction x:TypeArguments="scg:Dictionary(x:String, x:Object)">
+          <Delay Duration="00:00:00.2500000" sap2010:WorkflowViewState.IdRef="Delay_1" />
+        </ActivityAction>
+      </ufa:FormActivity.DelayBody>
+      <ufa:FormActivity.FormFieldsCollection>
+        <scg:Dictionary x:TypeArguments="x:String, Argument" />
+      </ufa:FormActivity.FormFieldsCollection>
+    </ufa:FormActivity>
+  </Sequence>
+</Activity>

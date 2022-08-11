@@ -1,0 +1,199 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="ProgressWindow" sap:VirtualizedContainerService.HintSize="1423,1857" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:swf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms" xmlns:ucam="clr-namespace:UiPath.Core.Activities.Model;assembly=UiPath.IPC.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uia="clr-namespace:UiPath.IPC.Activities;assembly=UiPath.IPC.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="64">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.WPFInteractive.Forms.Enum</x:String>
+      <x:String>UiPath.WPFInteractive.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.Triggers</x:String>
+      <x:String>UiPath.Platform.Triggers.Scope</x:String>
+      <x:String>UiPath.IPC.Activities</x:String>
+      <x:String>UiPath.Core.Activities.Model</x:String>
+      <x:String>UiPath.Web.Activities</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>System.Windows.Forms</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Windows.Forms.Layout</x:String>
+      <x:String>System.Windows.Forms.Automation</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="64">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualStudio.Services.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>UiPath.IntelligentOCR</AssemblyReference>
+      <AssemblyReference>UiPath.Python</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>System.Windows.Forms</AssemblyReference>
+      <AssemblyReference>UiPathTeam.StatusProgress.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.WPFInteractive.Forms</AssemblyReference>
+      <AssemblyReference>UiPath.WPFInteractive.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Callout.Activity</AssemblyReference>
+      <AssemblyReference>UiPath.Form.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.IPC.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="This workflow displays the initial status window and receives updates to it via the IPC Message Receiver Trigger. &#xA;&#xA;Status window updates can be sent throughout the workflow via the IPC Broadcast Message activity. By sending messages through the &quot;StatusWindow&quot; channel, the status window will be updated with the message text." DisplayName="Display Status Window and Messages" sap:VirtualizedContainerService.HintSize="658,1792" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="swf:Label" Name="lbl_alerts" />
+      <Variable x:TypeArguments="swf:Form" Default="[New System.Windows.forms.form]" Name="form" />
+      <Variable x:TypeArguments="x:String" Default="Welcome to your UiPath automation" Name="str_comments" />
+      <Variable x:TypeArguments="swf:Label" Name="lbl_logo" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:InvokeCode ContinueOnError="{x:Null}" Code="             System.Windows.Forms.Application.Exit()&#xA;&#xA;&#xA;            form= New System.Windows.forms.form&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;form.SuspendLayout()&#xA;&#x9;&#x9;&#x9;form.MaximizeBox = False&#xA;&#x9;&#x9;&#x9;form.ShowIcon = False&#xA;            form.TopMost = True&#xA;            form.AutoSize = True&#xA;&#x9;&#x9;&#x9;form.AutoSizeMode = AutoSizeMode.GrowAndShrink&#xA;&#x9;&#x9;&#x9;form.MinimumSize = New size(250, 100)&#xA;   &#x9;&#x9;&#x9;form.BackColor = Color.FromArgb(250, 70, 22)&#xA;   &#x9;&#x9;&#x9;form.Font = New System.Drawing.Font(&quot;Arial&quot;, 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)&#xA;            form.StartPosition = FormStartPosition.Manual&#xA;&#xA;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;&#x9;lblFlogo = New System.Windows.Forms.Label()&#xA;            lblFlogo.AutoSize = True&#xA;&#x9;&#x9;&#x9;lblFlogo.TextAlign = ContentAlignment.TopLeft&#xA;&#x9;&#x9;&#x9;lblFlogo.BackColor = Color.FromArgb(241, 246, 248)&#xA;            lblFlogo.Location = New System.Drawing.Point(2, 2)&#xA;            lblFlogo.Name = &quot;lblFlogo&quot;&#xA;            lblFlogo.TabIndex = 0&#xA;&#x9;&#x9;&#x9;lblFlogo.Image = System.Drawing.Image.FromFile(logoPath)&#xA;&#x9;&#x9;&#x9;lblFlogo.ImageAlign = ContentAlignment.TopLeft&#xA;&#x9;&#x9;&#x9;lblFlogo.Text = &quot;           Process Progress&quot;&#xA;&#x9;&#x9;&#x9;lblFlogo.Font = New System.Drawing.Font(&quot;Arial&quot;, 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)&#xA;&#x9;&#x9;&#x9;lblFlogo.TextAlign = ContentAlignment.TopLeft&#xA;&#xA;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;&#x9;lblFname = New System.Windows.Forms.Label()&#xA;            lblFname.AutoSize = True&#xA;&#x9;&#x9;&#x9;lblFname.MinimumSize = New size(298, 95)&#xA;&#x9;&#x9;&#x9;lblFname.TextAlign = ContentAlignment.MiddleLeft&#xA;            lblFname.ForeColor = System.Drawing.Color.Black&#xA;&#x9;&#x9;&#x9;lblFname.BackColor = Color.FromArgb(241, 246, 248)&#xA;            lblFname.Location = New System.Drawing.Point(2, 2)&#xA;            lblFname.Name = &quot;lblFname&quot;&#xA;            lblFname.TabIndex = 1&#xA;            lblFname.Text = FullName.Trim&#xA;&#x9;&#x9;&#x9;lblFname.Padding = New Padding(20)&#xA;   &#xA;            form.Location = New Point(Screen.PrimaryScreen.WorkingArea.left, &#xA;            Screen.PrimaryScreen.WorkingArea.Top)&#xA;&#xA;&#x9;&#x9;&#x9;form.Controls.Add(lblFlogo)&#xA;            form.Controls.Add(lblFname)&#xA;&#x9;&#x9;&#x9;form.ResumeLayout()&#xA;            form.Name = &quot;Form1&quot;&#xA;            form.Show()&#xA;&#xA;&#xA;   &#xA;" DisplayName="Invoke code - Render Status Window" sap:VirtualizedContainerService.HintSize="616,164" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
+      <ui:InvokeCode.Arguments>
+        <InOutArgument x:TypeArguments="swf:Label" x:Key="lblFname">[lbl_alerts]</InOutArgument>
+        <InArgument x:TypeArguments="sd:SizeF" x:Key="AutoScaleDimensions" />
+        <InArgument x:TypeArguments="swf:AutoScaleMode" x:Key="AutoScaleMode" />
+        <InArgument x:TypeArguments="sd:Size" x:Key="ClientSize" />
+        <InArgument x:TypeArguments="swf:Control" x:Key="Controls" />
+        <InOutArgument x:TypeArguments="swf:Form" x:Key="form">[form]</InOutArgument>
+        <InOutArgument x:TypeArguments="x:String" x:Key="FullName">[str_comments]</InOutArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="logopath">[directory.GetCurrentDirectory+"\Data\Supporting\logo.jpeg"]</InArgument>
+        <InOutArgument x:TypeArguments="swf:Label" x:Key="lblFlogo">[lbl_Logo]</InOutArgument>
+      </ui:InvokeCode.Arguments>
+    </ui:InvokeCode>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="616,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Rendered Status Window&quot;]" />
+    <ui:TriggerScope DisplayName="Trigger Scope" sap:VirtualizedContainerService.HintSize="616,1293" sap2010:WorkflowViewState.IdRef="TriggerScope_1" SchedulingMode="Sequential">
+      <ui:TriggerScope.Action>
+        <ActivityAction x:TypeArguments="ucam:MessageTriggerArgs">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ucam:MessageTriggerArgs" Name="args" />
+          </ActivityAction.Argument>
+          <Switch x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="If message received is &quot;EndProcess&quot;, close the status window, otherwise update the status window with the message received." DisplayName="Switch" Expression="[args.Message]" sap:VirtualizedContainerService.HintSize="564,979" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+            <Switch.Default>
+              <Sequence DisplayName="Update status window" sap:VirtualizedContainerService.HintSize="526,755" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <If sap2010:Annotation.AnnotationText="If the user closed the status window manually, stop receiving messages." Condition="[form.Controls(&quot;lblFname&quot;) is Nothing]" sap:VirtualizedContainerService.HintSize="484,463" sap2010:WorkflowViewState.IdRef="If_1">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <If.Then>
+                    <Sequence sap:VirtualizedContainerService.HintSize="376,245" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="[&quot;Status window closed&quot;]" />
+                      <ui:Break sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Break_4" />
+                    </Sequence>
+                  </If.Then>
+                  <If.Else>
+                    <Sequence sap2010:WorkflowViewState.IdRef="Sequence_8">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </Sequence>
+                  </If.Else>
+                </If>
+                <Assign sap:VirtualizedContainerService.HintSize="484,60" sap2010:WorkflowViewState.IdRef="Assign_8">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:String">[str_comments]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:String">[args.Message]</InArgument>
+                  </Assign.Value>
+                </Assign>
+                <Assign sap:VirtualizedContainerService.HintSize="484,60" sap2010:WorkflowViewState.IdRef="Assign_9">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:String">[form.Controls("lblFname").Text]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:String">[str_comments]</InArgument>
+                  </Assign.Value>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Assign>
+              </Sequence>
+            </Switch.Default>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:Break x:Key="EndProcess" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Break_3" />
+          </Switch>
+        </ActivityAction>
+      </ui:TriggerScope.Action>
+      <ui:TriggerScope.Triggers>
+        <scg:List x:TypeArguments="Activity" Capacity="4">
+          <uia:MessageReceiverTrigger Channel="StatusWindow" DisplayName="Message receiver trigger - listens for status updates" Duration="0" sap:VirtualizedContainerService.HintSize="580,84" sap2010:WorkflowViewState.IdRef="MessageReceiverTrigger_1" />
+        </scg:List>
+      </ui:TriggerScope.Triggers>
+    </ui:TriggerScope>
+  </Sequence>
+</Activity>
